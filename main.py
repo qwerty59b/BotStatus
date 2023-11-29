@@ -19,13 +19,13 @@ log = logging.getLogger("BotStatus")
 
 # fetching variales from env
 try:
-    APP_ID = config("APP_ID", cast=int)
+    APP_ID = config("API_ID", cast=int)
     API_HASH = config("API_HASH")
-    SESSION = config("SESSION")
+    SESSION = config("STRING_SESSION")
     LIST_BOTS = config("BOTS")
     CHANNEL_ID = config("CHANNEL_ID", cast=int)
     MESSAGE_ID = config("MESSAGE_ID", cast=int)
-    CHANNEL_NAME = config("CHANNEL_NAME", default="@BotzHub")
+    CHANNEL_NAME = config("CHANNEL_NAME", default="@TaKu")
     TIME_ZONE = config("TIME_ZONE", default="Asia/Kolkata")
 except BaseException as ex:
     log.info(ex)
